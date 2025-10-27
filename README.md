@@ -131,7 +131,7 @@ cd ...
 
 运行 Flask 应用
 
-# [你自己填写运行 hello.py 的命令]
+(vnev)..$ python3 hello.py
 
 
 访问应用
