@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+    My Profile Page
+{% endblock %}
+
+{% block content %}
+    <h1>Welcome, {{ name }}!</h1>
+
+    <p>this is your skill list:</p>
+
+    <ul>
+        {% for skill in skills %}
+            <li>{{ skill }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

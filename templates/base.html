@@ -1,0 +1,31 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}My Website{% endblock %}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('hello') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <!-- 
+                  MODIFIED: This now points to 'messages' (the function name)
+                  NEW: We also add a link to the contact page
+                -->
+                <li><a href="{{ url_for('messages') }}">Messages</a></li>
+                <li><a href="{{ url_for('contact') }}">Leave a Message</a></li>
+            </ul>
+        </nav>
+        
+        <div class="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+        
+    </body>
+    </html>
+    
+

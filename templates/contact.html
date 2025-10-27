@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Me{% endblock %}
+
+{% block content %}
+    <h1>contact me</h1>
+    <p>Please leave me a comment below ：</p>
+
+    <form action="{{ url_for('contact') }}" method="POST">
+
+        <label for="user_message">Your message :</label>
+        <input type="text" id="user_message" name="user_message">
+
+        <button type="submit"> post </button>
+    </form>
+
+{% endblock %}

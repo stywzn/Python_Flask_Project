@@ -1,0 +1,31 @@
+    {% extends "base.html" %}
+
+    {% block title %}Guestbook{% endblock %}
+
+    {% block content %}
+        <h1>All Messages (Newest First)</h1>
+
+        <!-- This is a special container for our messages -->
+        <div class="message-list">
+            
+            <!-- 
+              We loop through the 'messages' list
+              that we passed from the 'messages()' function in hello.py
+            -->
+            {% for msg in messages %}
+                <div class="message-item" style="border: 1px solid #ccc; padding: 10px; margin-top: 10px; border-radius: 5px;">
+                    <!-- Display the message content -->
+                    <p>"{{ msg.content }}"</p>
+                    <small>(Message ID: {{ msg.id }})</small>
+                </div>
+            {% else %}
+                <!-- 
+                  This 'else' block runs if the 'messages' list is empty
+                -->
+                <p>No messages yet. Be the first to <a href="{{ url_for('contact') }}">leave one</a>!</p>
+            {% endfor %}
+        </div>
+
+    {% endblock %}
+    
+
