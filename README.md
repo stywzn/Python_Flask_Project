@@ -44,53 +44,140 @@ Postman: 用于 API 测试
 
 API 接口文档 (API Endpoints)
 
-你需要用 Postman 测试以下所有接口，并把你自己的截图放在这里。
-
 方法 (Method)
 
 路由 (Route)
 
-功能描述
-
-请求体 (Body) (JSON)
-
-成功响应 (Success Response) (JSON)
-
-API 接口文档 (API Endpoints)
-
-方法 (Method)
-
-路由 (Route)
-
-功能描述
-
-请求体 (Body) (JSON)
-
-成功响应 (Success Response) (截图)
 
 GET
 
 /api/messages
 
-获取所有消息的列表。
-
-(无)
-
 <img src="https://github.com/user-attachments/assets/cc9f0e04-651c-4363-8d23-964c625d2799" width="500" />
+
+{
+
+  "messages": [
+
+    {
+
+      "content": "stywzn",
+
+      "id": 3
+
+    },
+
+    {
+
+      "content": "This is the NEW, UPDATED content.",
+
+      "id": 2
+
+    },
+
+    {
+
+      "content": "hello",
+
+      "id": 1
+
+    }
+
+  ]
+
+}
+
+
+
+
 
 POST
 
-/api/messages/create
+/api/messages/
 
-创建一条新消息。
+<img src="https://github.com/user-attachments/assets/6c1e14ef-64d8-4831-ba8b-c7b4b817a3b0" width="500" />
+
+{
+
+    "messages": [
+
+        {
+
+            "content": "stywzn",
+
+            "id": 4
+
+        },
+
+        {
+
+            "content": "stywzn",
+
+            "id": 3
+
+        },
+
+        {
+
+            "content": "This is the NEW, UPDATED content.",
+
+            "id": 2
+
+        },
+
+        {
+
+            "content": "hello",
+
+            "id": 1
+
+        }
+
+    ]
+
+}
 
 
 
+PUT
+
+/api/messages/update/4
+
+<img src="https://github.com/user-attachments/assets/55562eea-aa0e-49a5-8585-dea5c5f269a7" width="500" />
 
 
+
+{"content": "Updated"}
+
+{
+
+    "message": "Message 4 has been updated.",
+
+    "success": true,
+
+    "updated_message": {
+
+        "content": "whoami",
+
+        "id": 4
+
+    }
+
+}
+
+
+
+DELETE
+
+/api/messages/delete/4
+
+
+
+<img src="https://github.com/user-attachments/assets/9af17b2e-228f-42c1-adc0-5cc3305f9668" width="500" />
 
 
 如何本地运行 (How to Run Locally)
+
 
 Clone 仓库 (或下载文件)
 
@@ -99,28 +186,23 @@ cd ...
 
 
 创建并激活虚拟环境
-python3 venv venv
-
-# [你自己填写创建 venv 的命令]
-# [你自己填写激活 venv 的命令]
+python3 -m venv venv
+source venv/bin/activate
 
 
 安装依赖包
 
-# [你自己填写安装 Flask 和 Flask-SQLAlchemy 的命令]
+(venv)...$ pip install Flask FlaskSQLAlchemy
 
 
 创建数据库文件
 
-这是一个一次性步骤。
-
-# [你自己填写进入 Python 交互式 shell 的命令]
-
-# [你自己填写 Python shell 里的命令 (导入 app, db)]
-# [你自己填写 Python shell 里的命令 (with app.app_context()...)]
-# [你自己填写 Python shell 里的命令 (db.create_all())]
-# [你自己填写 Python shell 里的命令 (退出)]
-
+python3
+>>> from hello import app,db
+>>> with app.app_context():
+...  db.create_all()
+...
+... exit()
 
 运行 Flask 应用
 
