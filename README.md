@@ -57,34 +57,13 @@ API 接口文档 (API Endpoints)
 成功响应 (Success Response) (JSON)
 
 
-Endpoint,Method,Description & Payloads,Postman Example
-<b>/api/messages</b>,GET,"Description: 获取所有消息。
+| **DELETE** | `/api/messages/delete/<id>` | 删除一条指定 ID 的消息。 (示例中 ID 为 4) | `(无)` | <img src="https://github.com/user-attachments/assets/9af17b2e-228f-42c1-adc0-5cc3305f9668" width="500" /> |
 
- Response Body: 
- json { ""messages"": [ { ""content"": ""stywzn"", ""id"": 3 }, { ""content"": ""This is the NEW, UPDATED content."", ""id"": 2 }, { ""content"": ""hello"", ""id"": 1 } ] } ","<img src=""https://github.com/user-attachments/assets/cc9f0e04-651c-4363-8d23-964c625d2799"" width=""500"" />"
-<b>/api/messages</b>,POST,"Description: 创建一条新消息。
-
- Request Body: 
- json { ""content"": ""stywzn"" }  
- Response Body: (返回更新后的完整列表) 
- json { ""messages"": [ { ""content"": ""stywzn"", ""id"": 4 }, { ""content"": ""stywzn"", ""id"": 3 }, { ""content"": ""This is the NEW, UPDATED content."", ""id"": 2 }, { ""content"": ""hello"", ""id"": 1 } ] } ","<img src=""https://github.com/user-attachments/assets/6c1e14ef-64d8-4831-ba8b-c7b4b817a3b0"" width=""500"" />"
-<b>/api/messages/update/4</b>,PUT,"Description: 更新 id 为 4 的消息。
-
- Request Body: 
- json { ""content"": ""whoami"" }  
- Response Body: 
- json { ""message"": ""Message 4 has been updated."", ""success"": true, ""updated_message"": { ""content"": ""whoami"", ""id"": 4 } } ","<img src=""https://github.com/user-attachments/assets/55562eea-aa0e-49a5-8585-dea5c5f269a7"" width=""500"" />"
-<b>/api/messages/delete/4</b>,DELETE,"Description: 删除 id 为 4 的消息。
-
- Response Body: 
- (无内容, 返回 200 OK 状态码)","<img src=""https://github.com/user-attachments/assets/9af17b2e-228f-42c1-adc0-5cc3305f9668"" width=""500"" />"
 
 
 
 
 如何本地运行 (How to Run Locally)
-
-[这是最重要的部分，请你亲手填写下面的步骤]
 
 Clone 仓库 (或下载文件)
 
