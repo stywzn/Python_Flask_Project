@@ -56,8 +56,35 @@ API 接口文档 (API Endpoints)
 
 成功响应 (Success Response) (JSON)
 
+API 接口文档 (API Endpoints)
 
-| **DELETE** | `/api/messages/delete/<id>` | 删除一条指定 ID 的消息。 (示例中 ID 为 4) | `(无)` | <img src="https://github.com/user-attachments/assets/9af17b2e-228f-42c1-adc0-5cc3305f9668" width="500" /> |
+方法 (Method)
+
+路由 (Route)
+
+功能描述
+
+请求体 (Body) (JSON)
+
+成功响应 (Success Response) (截图)
+
+GET
+
+/api/messages
+
+获取所有消息的列表。
+
+(无)
+
+<img src="https://github.com/user-attachments/assets/cc9f0e04-651c-4363-8d23-964c625d2799" width="500" />
+
+POST
+
+/api/messages/create
+
+创建一条新消息。
+
+
 
 
 
