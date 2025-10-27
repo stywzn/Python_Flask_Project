@@ -60,11 +60,32 @@ GET
 
 /api/messages
 
+<img width="2880" height="1800" alt="Screenshot from 2025-10-27 13-11-26" src="https://github.com/user-attachments/assets/cc9f0e04-651c-4363-8d23-964c625d2799" />
+{
+  "messages": [
+    {
+      "content": "stywzn",
+      "id": 3
+    },
+    {
+      "content": "This is the NEW, UPDATED content.",
+      "id": 2
+    },
+    {
+      "content": "hello",
+      "id": 1
+    }
+  ]
+}
+
 [你自己填写] (例如: 获取所有消息)
 
 (无)
 
 {"messages": [...]}
+
+
+
 
 POST
 
